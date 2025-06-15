@@ -1,104 +1,121 @@
-# Scriviamo il file HTML completo con tutte le funzionalità richieste
-html_code = """
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reverence – Il social anonimo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Reverence - Il Social Anonimo</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0e0e0e;
-      color: white;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a001a);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
     }
     header {
-      text-align: center;
-      padding: 2rem 1rem;
+      margin-bottom: 2rem;
     }
-    header img {
-      width: 100px;
+    .logo {
+      max-width: 120px;
       border-radius: 50%;
+      box-shadow: 0 0 20px #8000ff80;
     }
     h1 {
-      font-size: 2.2rem;
-      margin-top: 1rem;
+      font-size: 2.5rem;
+      color: #a64dff;
+      margin: 1rem 0 0.5rem;
+      text-shadow: 0 0 10px #a64dff;
     }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      margin-top: 1rem;
-      background-color: #5e17eb;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #ccc;
     }
-    .section {
+    section {
+      margin: 2rem 0;
       max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
+    }
+    a.button {
+      display: inline-block;
+      background: #a64dff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      margin-top: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px #8000ff80;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #9900cc;
     }
     ul {
-      padding-left: 1rem;
-    }
-    ul li {
-      margin: 0.5rem 0;
-    }
-    .emoji {
-      margin-right: 0.5rem;
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
     }
     footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #aaa;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .emoji {
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://scontent-mxp2-1.cdninstagram.com/v/t51.2885-19/447153009_479847671071015_3623854842372271355_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-mxp2-1.cdninstagram.com&_nc_cat=101&_nc_ohc=l1jl51PX0DAQ7kNvgEgIHGH&edm=APs17CUBAAAA&ccb=7-5&oh=00_AYCiKM5gQyf_ClVuPbK4dGuBdfZUk9y2oS7eB8E-eoae0A&oe=6661E39D&_nc_sid=10d13b" alt="Logo Reverence" />
+    <img src="https://cdn.jsdelivr.net/gh/openai/static/reverence-logo.jpg" alt="Logo Reverence" class="logo" />
     <h1>Reverence</h1>
-    <p>Il social anonimo per chi vuole solo essere se stesso.</p>
-    <a href="#scopri" class="btn">Scopri di più</a>
+    <h2>Il social anonimo per chi vuole solo essere se stesso.</h2>
+    <a class="button" href="#scopri">Scopri di più</a>
   </header>
 
-  <section id="scopri" class="section">
-    <h2>Cos'è Reverence?</h2>
-    <p>Reverence è un social completamente anonimo. Nessuno può vedere chi sei, ma tutti possono capire come ti senti. Ogni profilo ha solo un username casuale, nessun volto, nessuna bio. Solo emozioni.</p>
-
-    <h3>✨ Funzionalità principali</h3>
+  <section id="scopri">
+    <h2>Cosa puoi fare su Reverence?</h2>
     <ul>
-      <li><span class="emoji">🌀</span>Feed basato sulle emozioni</li>
-      <li><span class="emoji">🎭</span>Profilo anonimo e sicuro</li>
-      <li><span class="emoji">🎁</span>Vinci premi esclusivi condividendo Reverence</li>
-      <li><span class="emoji">🧠</span>Intelligenza artificiale integrata per cercare emozioni</li>
-      <li><span class="emoji">🛡️</span>Crittografia end-to-end nei messaggi</li>
-      <li><span class="emoji">🎡</span>Ruota della fortuna con premi</li>
+      <li>🧠 Intelligenza Artificiale integrata per trovare storie legate al tuo umore</li>
+      <li>🔒 Crittografia End-to-End (in arrivo ad Agosto)</li>
+      <li>🎡 Ruota della fortuna con premi in punti</li>
+      <li>📸 Post con testo, immagini, video</li>
+      <li>💬 Commenti, mi piace e messaggistica privata</li>
+      <li>🎯 Segui profili in modo anonimo</li>
+      <li>📨 Ricevi notifiche e aggiorna la tua storia</li>
+      <li>🌍 Nessuno ti conosce, ma tutti ti capiscono</li>
     </ul>
+    <p>Condividi Reverence e ottieni vantaggi esclusivi ✨</p>
+  </section>
 
-    <h3>💌 Contattaci</h3>
-    <p>Hai un'idea per una nuova funzione? Se doni, puoi inviarcela e potresti vederla integrata nell'app!</p>
-    <a class="btn" href="mailto:contact.reverenceapp@gmail.com">Scrivici via email</a>
-
-    <h3>☕ Supporta Reverence su Ko-fi</h3>
-    <p>Donando su Ko-fi, ricevi vantaggi esclusivi:</p>
+  <section>
+    <h2>Premi per chi sostiene il progetto 🎁</h2>
     <ul>
-      <li><span class="emoji">🚀</span>Accesso anticipato a funzionalità in beta</li>
-      <li><span class="emoji">🎉</span>Partecipazione a giveaway mensili</li>
-      <li><span class="emoji">🧩</span>Possibilità di proporre funzionalità da aggiungere all'app</li>
+      <li>💎 Donazione 1€+: Accesso anticipato all’app</li>
+      <li>🎨 Donazione 5€+: Tema esclusivo nell’app</li>
+      <li>💬 Donazione 10€+: Il tuo nome (o username) nei crediti</li>
+      <li>🛠 Donazione 20€+: Proponi una funzionalità e verrà aggiunta</li>
     </ul>
-    <a class="btn" href="https://ko-fi.com/reverenceapp" target="_blank">Dona ora su Ko-fi</a>
+    <p>❤️ Ogni donazione supporta lo sviluppo indipendente dell’app</p>
+    <a class="button" href="https://ko-fi.com/reverenceapp" target="_blank">Sostienici su Ko-fi</a>
+  </section>
 
-    <h3>📲 Seguici per aggiornamenti</h3>
-    <ul>
-      <li><a class="btn" href="https://www.instagram.com/officialreverence" target="_blank">Instagram</a></li>
-      <li><a class="btn" href="https://www.tiktok.com/@reverenceofficial" target="_blank">TikTok</a></li>
-    </ul>
+  <section>
+    <h2>Contattaci 📧</h2>
+    <p>Hai un’idea per migliorare Reverence?</p>
+    <p>Se hai donato, puoi anche proporre una funzionalità che sarà aggiunta all’app!</p>
+    <a class="button" href="mailto:contact.reverenceapp@gmail.com">Mandaci un'email</a>
+  </section>
+
+  <section>
+    <h2>Seguici sui social 📱</h2>
+    <a class="button" href="https://www.instagram.com/officialreverence" target="_blank">Instagram</a><br><br>
+    <a class="button" href="https://www.tiktok.com/@reverenceofficial" target="_blank">TikTok</a>
   </section>
 
   <footer>
@@ -106,11 +123,3 @@ html_code = """
   </footer>
 </body>
 </html>
-"""
-
-# Salva il file HTML
-file_path = "/mnt/data/reverence_landing_page.html"
-with open(file_path, "w") as file:
-    file.write(html_code)
-
-file_path
