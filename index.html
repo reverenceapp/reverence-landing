@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reverence - Essere sé stessi. Per davvero.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  :root {
+    --bg-color: #121212;
+    --accent-color: #8e44ad; /* viola */
+    --text-color: #eee;
+    --text-light: #bbb;
+    --btn-bg: #8e44ad;
+    --btn-hover: #6f2d89;
+    --section-padding: 60px 20px;
+    --max-width: 900px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+  }
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    padding: 80px 20px 40px;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  header p {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+  }
+  .btn-primary {
+    background-color: var(--btn-bg);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background-color: var(--btn-hover);
+  }
+  section {
+    padding: var(--section-padding);
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-weight: 300;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  /* Donazioni e premi */
+  .donations {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .donations p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .donations-btn {
+    margin-bottom: 40px;
+  }
+  .donations-btn a {
+    background-color: var(--btn-bg);
+    color: #fff;
+    padding: 14px 50px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .donations-btn a:hover {
+    background-color: var(--btn-hover);
+  }
+  .prizes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    text-align: center;
+  }
+  .prize-box {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  }
+  .prize-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+  }
+  .prize-title {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  /* Ringraziamenti */
+  .thank-you-list {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: var(--text-light);
+  }
+  .thank-you-list span {
+    display: inline-block;
+    background: #2e2e2e;
+    margin: 5px 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+  /* FAQ */
+  .faq-item {
+    max-width: 700px;
+    margin: 15px auto;
+    background: #1e1e1e;
+    padding: 18px 25px;
+    border-radius: 12px;
+    cursor: default;
+  }
+  .faq-item h3 {
+    margin: 0 0 8px;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+  .faq-item p {
+    margin: 0;
+    font-weight: 300;
+    color: var(--text-light);
+  }
+  /* Form iscrizione email */
+  form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  form input[type=email] {
+    width: 75%;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    outline: none;
+  }
+  form button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--btn-bg);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  form button:hover {
+    background-color: var(--btn-hover);
+  }
+  /* Condividi */
+  .share-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+  }
+  .share-section p {
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+  }
+  .share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .share-btn {
+    background-color: var(--btn-bg);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  .share-btn:hover {
+    background-color: var(--btn-hover);
+  }
+  /* Citazione */
+  .quote {
+    font-style: italic;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 40px 20px 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Chi siamo */
+  .about {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-weight: 300;
+    color: var(--text-light);
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  /* Contatti */
+  .contacts {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--text-light);
+  }
+  /* Footer */
+  footer {
+    background-color: #1a1a1a;
+    padding: 20px 15px;
+    text-align: center;
+    color: var(--text-light);
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  footer a {
+    margin: 0 8px;
+    color: var(--accent-color);
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    .prizes-grid {
+      grid-template-columns: 1fr;
+    }
+    form input[type=email] {
+      width: 60%;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form button {
+      width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+<!-- FontAwesome CDN for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <h1>Essere sé stessi. Per davvero.</h1>
+  <p>Il primo social dove puoi essere davvero te stesso, senza giudizi. Anonimamente.</p>
+  <button class="btn-primary" onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth'})">Scopri di più</button>
+</header>
+
+<section id="intro" class="container">
+  <h2>Cos’è Reverence?</h2>
+  <p>Reverence è un social network anonimo pensato per ragazzi e giovani tra i 14 e i 25 anni, dove puoi esprimere liberamente le tue emozioni senza paura di giudizi o etichette. Qui non conta chi sei, ma cosa senti davvero.</p>
+  <p>
